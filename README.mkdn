@@ -1,0 +1,79 @@
+jQuery ratingbar
+================
+
+
+Introduction
+------------
+
+This plugin creates a horizontal rating bar using CSS.
+Consider the following markup:
+
+		<table id="movies">
+			<tr> 
+			 <td>An awesome movie title</td> 
+			 <td>2005</td> 
+			 <td>Some guy looses his hat</td>
+			 <td class="movie_rating">95</td> 
+			</tr>
+			<tr> 
+			 <td>What a bad movie title</td> 
+			 <td>1985</td> 
+			 <td>Gozilla ate my pants</td>
+			 <td class="movie_rating">25</td> 
+			</tr>
+		</table>
+
+Running the plugin you get the output by default:
+
+		<table id="movies">
+			<tr> 
+			 <td>An awesome movie title</td> 
+			 <td>2005</td> 
+			 <td>Some guy looses his hat</td>
+			 <td class="movie_rating">
+			 	<div class="ratingbar_wrapper" style="width: 100px; ">
+			 		<div class="ratingbar_inner" style="width: 95px; ">
+			 			<div class="ratingbar_text">95</div>
+			 		</div>
+			 	</div>
+			 </td> 
+			</tr>
+			<tr> 
+			 <td>What a bad movie title</td> 
+			 <td>1985</td> 
+			 <td>Gozilla ate my pants</td>
+			<td class="movie_rating">
+				<div class="ratingbar_wrapper" style="width: 100px; ">
+					<div class="ratingbar_inner" style="width: 95px; ">
+						<div class="ratingbar_text">25</div>
+					</div>
+				</div>
+			</td>  
+			</tr>
+		</table>
+		
+The plugin can be fully customized. Look into the example files for details.
+
+Installation
+------------
+
+1. Put the included js and css folder into your projects root folder.
+
+2. Include the following code somewhere between <head> and </head> of your website:
+
+		<link rel="stylesheet" type="text/css" href="css/ratingbar.css" /> 
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ratingbar.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('.rating').ratingbar();
+			});
+		</script>
+		
+3. Put a rating-element into the body of the website. For instance:
+
+		<div class="rating">80</div>
+		
+That's it. Have fun! Look into the example files for advanced options
+
+

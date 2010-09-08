@@ -1,0 +1,85 @@
+/* EXAMPLE 1 - DEFAULT CONFIGURATION */
+
+.ratingbar_wrapper {
+	width: 100px; // default value
+	height: 20px;
+	background-color: #ccc;
+	border: 3px #ccc solid;
+	overflow: hidden;
+}
+
+.ratingbar_inner {
+	width: 0px;
+	height: 20px;
+	border: 5px white;
+	background-color: #009BFF;
+}
+
+.ratingbar_text {
+	color: white;
+	font-size: 60%;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+
+/* EXAMPLE 2 - ADVANCED CONFIGURATION */
+
+.wrapper_books {
+	width: 100px; // default value
+	height: 20px;
+	border: 2px white solid;
+	overflow: hidden;
+	
+	/* CSS3 gradient background */
+	background: #ccc; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc', endColorstr='#eee'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#eee)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ccc,  #eee); /* for firefox 3.6+ */
+	
+	/* Rounded corners */
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+}
+
+.inner_books {
+	width: 0px;
+	height: 30px;
+	border: 5px white;
+	background-color: #e600e2;
+	background-image: url("../img/loading.gif");
+	
+	/* Rounded corners */
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+}
+
+.rating_books {
+	font-size: 1.2em;
+	color: white;
+	padding-top: 5px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: Verdana;
+}
+
+
+/* EXAMPLE 3 - HEART RATING */
+
+
+.heart_empty {
+	width: 130px; // default value
+	height: 23px;
+	overflow: hidden;
+	background-image: url("../img/heart_empty.gif");
+	background-repeat: repeat-x;
+}
+
+.heart_filled {
+	width: 0px;
+	height: 23px;
+	background-image: url("../img/heart_filled.gif");
+	background-repeat: repeat-x;
+}

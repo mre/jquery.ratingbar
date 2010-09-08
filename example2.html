@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="language" content="en" />
+
+<link rel="stylesheet" type="text/css" href="css/ratingbar.css" /> 
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.ratingbar.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+	// Advanced usage with custom options
+	$('.book_rating').ratingbar({
+		maxRating: 		10,
+		wrapperWidth:	1000,
+		showText: 		false,
+		wrapperClass:	"wrapper_books",
+		innerClass:		"inner_books",
+		textClass: 		"rating_books"
+	});
+	
+	// Multiple ratings on a single site are possible
+	$('.love_rating').ratingbar({
+		wrapperWidth:	130,
+		showText: 		false,
+		wrapperClass:	"heart_empty",
+		innerClass:		"heart_filled"
+	});
+	
+	
+});
+</script>
+
+</head>
+<body>
+
+<h1>Here comes a fancy web 2.0 rating</h1>
+<table id="books">
+	<tr> 
+	 <td>She is awesome!</td> 
+	 <td>1919</td> 
+	 <td>Tooo good :)</td>
+	 <td class="book_rating">9</td> 
+	</tr>
+	<tr> 
+	 <td>Oh my</td> 
+	 <td>2001</td> 
+	 <td>Nice book. Too short.</td>
+	 <td class="book_rating">2</td> 
+	</tr>
+</table>
+
+<br />
+<br />
+
+<h1>Star ratings and so on are also possible!</h1>
+I like Jakob and Susie <div class="love_rating">90</div>
+<br />
+...but I hate Steve and that blond guy <div class="love_rating">13</div>!!!
+
+</body>
+</html>

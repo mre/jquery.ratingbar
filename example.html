@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="language" content="en" />
+
+<link rel="stylesheet" type="text/css" href="css/ratingbar.css" /> 
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.ratingbar.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+	$('.movie_rating').ratingbar();
+});
+</script>
+
+</head>
+<body>
+
+	<table id="movies">
+		<tr> 
+		 <td>An awesome movie title</td> 
+		 <td>2005</td> 
+		 <td>Some guy looses his hat</td>
+		 <td class="movie_rating">95</td> 
+		</tr>
+		<tr> 
+		 <td>What a bad movie title</td> 
+		 <td>1985</td> 
+		 <td>Gozilla ate my pants</td>
+		 <td class="movie_rating">25</td> 
+		</tr>
+	</table>
+
+</body>
+</html>
