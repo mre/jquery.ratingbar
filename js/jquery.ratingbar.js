@@ -9,7 +9,7 @@
  *	http://www.gnu.org/licenses/gpl.html
  * 
  * @version     0.1
- * @since       09.10.2010
+ * @since       09.09.2010
  * @author      Matthias Endler
  * @link        http://matthias-endler.de
  * @twitter     http://twitter.com/matthiasendler

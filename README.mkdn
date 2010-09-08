@@ -23,7 +23,7 @@ Consider the following markup:
 			</tr>
 		</table>
 
-Running the plugin you get the output by default:
+By default you get the following output:
 
 		<table id="movies">
 			<tr> 
@@ -76,4 +76,16 @@ Installation
 		
 That's it. Have fun! Look into the example files for advanced options
 
+
+License
+-------
+
+Copyright (c) 2010 Matthias Endler
+http://matthias-endler.de
+
+Dual licensed under the MIT and GPL licenses:
+	http://www.opensource.org/licenses/mit-license.php
+	http://www.gnu.org/licenses/gpl.html
+	
+See LICENSE.txt for details
 
