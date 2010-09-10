@@ -44,7 +44,7 @@ By default you get the following output:
 			 <td>Gozilla ate my pants</td>
 			<td class="movie_rating">
 				<div class="ratingbar_wrapper" style="width: 100px; ">
-					<div class="ratingbar_inner" style="width: 95px; ">
+					<div class="ratingbar_inner" style="width: 25px; ">
 						<div class="ratingbar_text">25</div>
 					</div>
 				</div>

@@ -24,6 +24,9 @@
 	// Define rating object with some default config settings
 	$.ratingbar = {
 		defaults: {
+			animate:		false, // Bar gets expanded on page load
+			duration:		1000, // Animation time
+			ease:			"linear", // Animation easing effect
 			maxRating: 		100,
 			wrapperWidth:	100,// pixels
 			showText: 		true,
@@ -75,9 +78,16 @@
 		// Set the proper rating for each bar
 		$("." + config.innerClass).each(
 			function() {
-				var rating = parseInt($('.' + config.textClass, this).text());
+				var rating = parseFloat($('.' + config.textClass, this).text());
 				var innerWidth = rating/config.maxRating * config.wrapperWidth;
-				$(this).width(innerWidth);
+				
+				if(config.animate) {
+					$(this).animate({ 
+					    width: innerWidth
+					  }, config.duration, config.ease );
+				} else {
+					$(this).width(innerWidth);
+				}
 			}
 		);
 		
