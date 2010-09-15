@@ -5,7 +5,12 @@ jQuery ratingbar
 Introduction
 ------------
 
-This plugin creates a horizontal rating bar using CSS.
+This plugin is replacing a textual rating by a rating bar using CSS.
+It degrades gracefully to simple text and is fully customizable (star ratings are a subset).
+It supports jQuery easing animations.
+
+Have a look into the examples folder.
+
 Consider the following markup:
 
 		<table id="movies">
@@ -23,36 +28,8 @@ Consider the following markup:
 			</tr>
 		</table>
 
-By default you get the following output:
+By default you get two rating bars where "95" and "25" stood before.
 
-		<table id="movies">
-			<tr> 
-			 <td>An awesome movie title</td> 
-			 <td>2005</td> 
-			 <td>Some guy looses his hat</td>
-			 <td class="movie_rating">
-			 	<div class="ratingbar_wrapper" style="width: 100px; ">
-			 		<div class="ratingbar_inner" style="width: 95px; ">
-			 			<div class="ratingbar_text">95</div>
-			 		</div>
-			 	</div>
-			 </td> 
-			</tr>
-			<tr> 
-			 <td>What a bad movie title</td> 
-			 <td>1985</td> 
-			 <td>Gozilla ate my pants</td>
-			<td class="movie_rating">
-				<div class="ratingbar_wrapper" style="width: 100px; ">
-					<div class="ratingbar_inner" style="width: 25px; ">
-						<div class="ratingbar_text">25</div>
-					</div>
-				</div>
-			</td>  
-			</tr>
-		</table>
-		
-The plugin can be fully customized. Look into the example files for details.
 
 Installation
 ------------
@@ -74,7 +51,7 @@ Installation
 
 		<div class="rating">80</div>
 		
-That's it. Have fun! Look into the example files for advanced options
+That's it. Have fun!
 
 
 License
