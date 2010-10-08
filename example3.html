@@ -8,29 +8,39 @@
 <link rel="stylesheet" type="text/css" href="css/ratingbar.css" /> 
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/jquery.ratingbar.js"></script>
+
+
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function() {
-	$('.movie_rating').ratingbar();
+	// Custom markup
+	$('.various_ratings').ratingbar();
 });
 </script>
 
 </head>
 <body>
 
-	<table id="movies">
-		<tr> 
-		 <td>An awesome movie title</td> 
-		 <td>2005</td> 
-		 <td>Some guy looses his hat</td>
-		 <td class="movie_rating">95</td> 
-		</tr>
-		<tr> 
-		 <td>What a bad movie title</td> 
-		 <td>1985</td> 
-		 <td>Gozilla ate my pants</td>
-		 <td class="movie_rating">25</td> 
-		</tr>
-	</table>
+<h1>You can use different rating scales and text, too:</h1>
+<table>
+	<tr> 
+	 <td>She is awesome!</td> 
+	 <td>1919</td> 
+	 <td>Tooo good :)</td>
+	 <td class="various_ratings">6.3 out of 10</td> 
+	</tr>
+	<tr> 
+	 <td>Oh my</td> 
+	 <td>2001</td> 
+	 <td>Nice book. Too short.</td>
+	 <td class="various_ratings">2.44 / 5</td> 
+	</tr>
+	<tr> 
+	 <td>She is awesome 2.</td> 
+	 <td>1988</td> 
+	 <td>Better than the first one</td>
+	 <td class="various_ratings">41 of 5</td> 
+	</tr>
+</table>
 
 </body>
 </html>

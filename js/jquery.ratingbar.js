@@ -8,7 +8,7 @@
  *	http://www.opensource.org/licenses/mit-license.php
  *	http://www.gnu.org/licenses/gpl.html
  * 
- * @version     0.1
+ * @version     0.2
  * @since       09.09.2010
  * @author      Matthias Endler
  * @link        http://matthias-endler.de
@@ -27,13 +27,13 @@
 			animate:		false, // Bar gets expanded on page load
 			duration:		1000, // Animation time
 			ease:			"linear", // Animation easing effect
-			maxRating: 		100,
-			wrapperWidth:	100,// pixels
-			showText: 		true,
-			ratingClass: 	"", // Custom selector
-			wrapperClass:	"ratingbar_wrapper",
-			innerClass:		"ratingbar_inner",
-			textClass: 		"ratingbar_text",
+			maxRating: 		100, // Highest rating that can be achieved
+			wrapperWidth:	100,// Width of container for rating
+			showText: 		true, // Show original rating text
+			ratingClass: 	"", // CSS class that contains the rating
+			wrapperClass:	"ratingbar_wrapper", // Custom class for rating container
+			innerClass:		"ratingbar_inner", // Custom class for actual rating
+			textClass: 		"ratingbar_text", // Custom class for rating text
 			wrapperMarkup:	'', // Custom markup for bar
 			innerMarkup: 	'',
 			textMarkup:		''
@@ -68,7 +68,8 @@
   	// Create rating bar
 	function ratingbar(config) {
 		// Create all bars at once
-		$(config.ratingClass).wrapInner(config.textMarkup)
+		$(config.ratingClass)
+			.wrapInner(config.textMarkup)
 			.wrapInner(config.innerMarkup)
 			.wrapInner(config.wrapperMarkup);
 			
@@ -78,15 +79,30 @@
 		// Set the proper rating for each bar
 		$("." + config.innerClass).each(
 			function() {
-				var rating = parseFloat($('.' + config.textClass, this).text());
-				var innerWidth = rating/config.maxRating * config.wrapperWidth;
+				// Get rating (and possibly rating scale)
+				var ratingValues = $('.' + config.textClass, this).text().match(/[0-9.]+/g);
 				
-				if(config.animate) {
-					$(this).animate({ 
-					    width: innerWidth
-					  }, config.duration, config.ease );
-				} else {
-					$(this).width(innerWidth);
+				// Do we have a valid rating?
+				if($.isArray(ratingValues)) {					
+					var rating = parseFloat(ratingValues.shift());
+					
+					// Always take second value as rating scale (ratings like 3 out of 5).
+					var scale = parseFloat(ratingValues.shift());
+					
+					// Check if valid scale
+					if (isNaN(scale)) 
+						scale = config.maxRating;
+					
+					// Set rating bar width
+					var innerWidth = rating/scale * config.wrapperWidth;
+					
+					if(config.animate) {
+						$(this).animate({ 
+							width: innerWidth
+						}, config.duration, config.ease );
+					} else {
+						$(this).width(innerWidth);
+					}
 				}
 			}
 		);
