@@ -5,7 +5,7 @@ jQuery ratingbar
 Introduction
 ------------
 
-This plugin is replacing a textual rating by a rating bar using CSS.
+This plugin is replacing a textual rating by a rating bar (like a level indicator) using CSS.
 It degrades gracefully to simple text and is fully customizable (star ratings are a subset).
 It supports jQuery easing animations.
 
