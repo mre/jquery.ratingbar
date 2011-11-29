@@ -30,6 +30,18 @@ Consider the following markup:
 
 By default you get two rating bars where "95" and "25" stood before.
 
+Features
+--------
+
+- Custom layout (colors, images,...)
+- Animation
+- Dynamic update of ratings
+- Graceful degradation
+
+Demo
+----
+
+Take a look at the demos on the [project site][home].
 
 Installation
 ------------
@@ -66,3 +78,4 @@ Dual licensed under the MIT and GPL licenses:
 	
 See LICENSE.txt for details
 
+[home]: http://www.matthias-endler.de/projects/ratingbar
