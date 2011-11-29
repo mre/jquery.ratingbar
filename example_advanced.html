@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="language" content="en" />
+
+<link rel="stylesheet" type="text/css" href="css/ratingbar.css" /> 
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.ratingbar.js"></script>
+
+<!-- Include easing for more animation styles -->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+	// Custom markup
+  var ratingconfig = {
+		animate:		true,
+		duration:		1000,
+		ease:			"easeOutBounce",
+		maxRating: 		10,
+		wrapperWidth:	1000,
+		showText: 		false,
+		wrapperClass:	"wrapper_books",
+		innerClass:		"inner_books",
+		textClass: 		"rating_books"
+	}
+	$('.book_rating').ratingbar(ratingconfig);
+
+  // Dynamically update the rating if the value changes
+  $("#bumper").click(function() {
+    var randomrating1=Math.floor(Math.random()*11)
+    $("#book1 ." + ratingconfig.textClass).text(randomrating1);
+
+    var randomrating2=Math.floor(Math.random()*11)
+    $("#book2 ." + ratingconfig.textClass).text(randomrating2);
+
+    $('.book_rating').ratingbar('update', ratingconfig);
+  });
+	
+	// Multiple ratings on a single site are possible
+  // Here comes the obligatory star-rating with custom images
+	$('.love_rating').ratingbar({
+		maxRating: 		5,
+		wrapperWidth:	130,
+		showText: 		false,
+		wrapperClass:	"heart_empty",
+		innerClass:		"heart_filled"
+	});
+
+});
+</script>
+
+</head>
+<body>
+<h1>Look at that fancy web 2.0 rating</h1>
+<table id="books">
+	<tr> 
+	 <td>She is awesome!</td> 
+	 <td>1919</td> 
+	 <td>Tooo good :)</td>
+	 <td id="book1" class="book_rating">9</td> 
+	</tr>
+	<tr> 
+	 <td>Oh my</td> 
+	 <td>2001</td> 
+	 <td>Nice book. Too short.</td>
+	 <td id="book2" class="book_rating">2</td> 
+	</tr>
+</table>
+<h2 id="bumper">Click here to change rating</h2>
+<br />
+<br />
+
+<h1>Here comes an example for the obligatory star ratings.</h1>
+I like Jakob and Susie <div class="love_rating">4.5</div>
+<br />
+...but I hate Steve and that blond guy <div class="love_rating">1</div>!!!
+
+</body>
+</html>
