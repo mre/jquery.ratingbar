@@ -1,0 +1,36 @@
+{
+    "name": "ratingbar",
+    "title": "jQuery Ratingbar",
+    "description": "Create graphical ratings (stars, bars) from text: 4/5 => ★★★★☆",
+    "keywords": [
+        "rating",
+        "star",
+        "ui",
+        "animation"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Matthias Endler",
+        "url": "http://matthias-endler.de"
+    },
+    "maintainers": [
+        {
+            "name": "Matthias Endler",
+            "url": "http://matthias-endler.de"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPLv3",
+            "url": "http://www.gnu.org/licenses/gpl.html"
+        }
+    ],
+    "homepage": "http://matthias-endler.de/projects/ratingbar",
+    "dependencies": {
+        "jquery": ">=1.6"
+    }
+}
